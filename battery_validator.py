@@ -13,7 +13,11 @@ for voltage in battery_voltage:
 
 
 total_tests = len(battery_voltage)
-pass_rate = (passed / total_tests) * 100
+
+if total_tests > 0:
+    pass_rate = (passed / total_tests) * 100
+else:
+    pass_rate = 0
 
 print("Total tests: " ,total_tests)
 print("Pass Rate: " ,pass_rate)
